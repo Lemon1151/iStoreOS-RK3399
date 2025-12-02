@@ -13,7 +13,7 @@
 
 | 设备           | 包名称                                                                   |
 | -------------- | ------------------------------------------------------------------------ |
-| NanoPi-T4      | istoreos-rockchip-rk35xx-fastrhino_r6xs-squashfs-combined.img.gz         |
+| NanoPC-T4      | istoreos-rockchip-armv8-friendlyarm_nanopc-t4-squashfs-combined.img.gz         |
 
 ## 鸣谢
 
