@@ -160,7 +160,7 @@ jobs:
         RELEASE_TAG="iStoreOS-24.10-RK3399_$(date +%Y.%m)"
         echo "RELEASE_TAG=${RELEASE_TAG}" >> $GITHUB_ENV
 
-    - name: Upload OpenWrt to Release
+    - name: 上传固件
       uses: ncipollo/release-action@main
       if: ${{ steps.clean.outputs.status }} == 'success' && !cancelled()
       with:
