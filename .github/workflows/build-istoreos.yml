@@ -20,7 +20,7 @@ env:
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
-  GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   build:
@@ -169,7 +169,7 @@ jobs:
         allowUpdates: true 
         removeArtifacts: false 
         replacesArtifacts: true 
-        token: ${{ secrets.OPWRT_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
         body: |  
           ### iStoreOS Image Information  
           - 💻 CPU: rk3399    
