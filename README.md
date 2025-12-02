@@ -6,49 +6,15 @@
 
 ## 默认配置
 
-- IP: `http://192.168.100.1` or `http://iStoreOS.lan/`
 - 用户名: `root`
 - 密码: `password`
-- 如果设备只有一个网口，则此网口就是 `LAN` , 如果大于一个网口, 默认第一个网口是 `WAN` 口, 其它都是 `LAN`
-- 如果要修改 `LAN` 口 `IP` , 首页有个内网设置，或者用命令 `quickstart` 修改
-- 北京时间每天 `0:00` 定时编译, `Release` 中只保留不同架构的最新版本
-- 历史版本在 `Actions` 中选择一个已经运行完成且成功的 `workflow` 在页面底部可以看到 `Artifacts`, `Artifacts` 需要登录 Github 才能下载
-- 请把要加入的插件配置项填写在仓库 “configfiles/config_data.txt” 文件里面，假如你直接填写到 “rk33xx/.config” 文件里面绝对会丢你新加的配置项，因为每天会定时执行同步文件 “Sync Files” 工作流会自动更新.config为istoreos官方最新的配置文件。
-- 自行定制时需要注意这几点：假如你禁用了 “Sync Files” 工作流的话，那插件配置项就要填写到 “rk33xx/.config” 文件里面才行，反之你没禁用 “Sync Files” 工作流的话，那插件配置项就要填写到 “configfiles/config_data.txt” 文件里面才行。
-- 使用此仓库必须设置机密token，Actions云编译固件时需要用到，其他人无法看到的（通常在仓库设置里面，严禁在仓库可视代码中填写，否则后果自负），机密键名为 `ACCESS_TOKEN`
+- 如果设备只有一个网口，则此网口就是 `LAN` 
 
-## 支持架构
-
-### RK33xx 架构
-
-| 设备       | 包名称                                                                    | 说明 |
-| ---------- | ------------------------------------------------------------------------- | ------ |
-| R2S        | istoreos-rockchip-armv8-friendlyarm_nanopi-r2s-squashfs-sysupgrade.img.gz | 无 |
-| R4S        | istoreos-rockchip-armv8-friendlyarm_nanopi-r4s-squashfs-sysupgrade.img.gz | 无 |
-| R4SE       | istoreos-rockchip-armv8-friendlyarm_nanopi-r4se-squashfs-sysupgrade.img.gz | 无 |
-| ROCK-PI-4A | istoreos-rockchip-armv8-radxa_rock-pi-squashfs-sysupgrade.img.gz | 无 |
-| ROCKPRO64  | istoreos-rockchip-armv8-pine64_rockpro64-squashfs-sysupgrade.img.gz  | 无 |
-| R08  | istoreos-rockchip-armv8-rk3399_r08-squashfs-sysupgrade.img.gz  | 默认主路由模式 |
-| TPM312  | istoreos-rockchip-armv8-rk3399_tpm312-squashfs-sysupgrade.img.gz  | 默认旁路由模式 |
-
-### RK35xx 架构
+### RK3399
 
 | 设备           | 包名称                                                                   |
 | -------------- | ------------------------------------------------------------------------ |
-| H66K/H68K/H69K | istoreos-rockchip-rk35xx-hinlink_opc-h6xk-squashfs-combined.img.gz       |
-| H88K           | istoreos-rockchip-rk35xx-hinlink_h88k-squashfs-combined.img.gz           |
-| NANOPI-R5S     | istoreos-rockchip-rk35xx-friendlyarm_nanopi-r5s-squashfs-combined.img.gz |
-| NANOPI-R6S     | istoreos-rockchip-rk35xx-friendlyarm_nanopi-r6s-squashfs-combined.img.gz |
-| R66S/R68S      | istoreos-rockchip-rk35xx-fastrhino_r6xs-squashfs-combined.img.gz         |
-| STATION-P2     | istoreos-rockchip-rk35xx-firefly_station-p2-squashfs-combined.img.gz     |
-| T68M     | istoreos-rockchip-rk35xx-lyt_t68m-squashfs-combined.img.gz     |
-
-### x86 架构
-
-| 启动       | 包名称                                              |
-| ---------- | --------------------------------------------------- |
-| X86-64     | istoreos-x86-64-generic-squashfs-combined.img.gz    |
-| X86-64-EFI | storeos-x86-64-generic-squashfs-combined-efi.img.gz |
+| NanoPi-T4      | istoreos-rockchip-rk35xx-fastrhino_r6xs-squashfs-combined.img.gz         |
 
 ## 鸣谢
 
