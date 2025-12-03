@@ -13,7 +13,7 @@
 
 | 设备           | 包名称                                                                   |
 | -------------- | ------------------------------------------------------------------------ |
-| NanoPC-T4      | istoreos-rockchip-armv8-friendlyarm_nanopc-t4-squashfs-combined.img.gz         |
+| NanoPC-T4      | istoreos-rockchip-armv8-friendlyarm_nanopc-t4-ext4-sysupgrade.img.gz     |
 
 ## 鸣谢
 
