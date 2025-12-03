@@ -146,7 +146,11 @@ jobs:
         if ls bin/targets/*/*/*.img.gz >/dev/null 2>&1; then
           cp -f bin/targets/*/*/*.img.gz output/
         fi
+
         rm -rf $(ls . | grep -v "^output$" | xargs) 2>/dev/null
+
+        echo "📁 output/ 目录内容:"
+        ls -l output/
 
         if [ -z "$(ls -A output/)" ]; then
           echo "❌ 未检测到任何固件文件！请检查 .config 是否正确启用了镜像格式。"
@@ -161,10 +165,12 @@ jobs:
         df -hT ${PWD}
         echo "status=success" >> ${GITHUB_OUTPUT}
 
-    - name: 设置 Release Tag
+    - name: 设置 Release Tag or date
       run: |
         RELEASE_TAG="iStoreOS-24.10-RK3399-$(date +%Y.%m)"
         echo "RELEASE_TAG=${RELEASE_TAG}" >> $GITHUB_ENV
+        BUILD_DATE="$(date +%Y.%m.%d)"
+        echo "BUILD_DATE=${BUILD_DATE}" >> $GITHUB_ENV
 
     - name: 上传固件
       uses: ncipollo/release-action@main
@@ -181,7 +187,7 @@ jobs:
           - 💻 CPU: rk3399    
           - 📂 源码: ${{ env.REPO_URL }}
           - 🌳 分支: ${{ matrix.REPO_BRANCH }}  
-          - ⏱️ 编译时间: $(date +"%Y年%m月%d日")
+          - ⏱️ 编译时间: ${{ env.BUILD_DATE }}
           - 👤 用户名: root
           - 🔒 密码: password
           - 📒 说明: 默认网口为LAN，旁路由模式，需要接入主路由器后进后台查找对应IP地址再访问。
