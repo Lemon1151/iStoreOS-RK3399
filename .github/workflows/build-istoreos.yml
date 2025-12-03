@@ -143,9 +143,15 @@ jobs:
         # Clean up server space
         cd openwrt/
         [[ -d "output" ]] || mkdir output
-        cp -f bin/targets/*/*/*rootfs.tar.gz output/
-        cp -f .config output/config
+        if ls bin/targets/*/*/*.img.gz >/dev/null 2>&1; then
+          cp -f bin/targets/*/*/*.img.gz output/
+        fi
         rm -rf $(ls . | grep -v "^output$" | xargs) 2>/dev/null
+
+        if [ -z "$(ls -A output/)" ]; then
+          echo "❌ 未检测到任何固件文件！请检查 .config 是否正确启用了镜像格式。"
+          exit 1
+        fi
 
         # Generate sha256sum file
         cd output/
