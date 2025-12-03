@@ -1,4 +1,4 @@
-# iStore OS 固件 | 定制的麻烦自行 fork 修改
+# iStore OS 固件 
 
 [![iStore使用文档](https://img.shields.io/badge/使用文档-iStore%20OS-brightgreen?style=flat-square)](https://doc.linkease.com/zh/guide/istoreos) 
 
@@ -19,6 +19,7 @@
 
 - [istoreos](https://github.com/istoreos/istoreos)
 - [P3TERX/Actions-OpenWrt](https://github.com/P3TERX/Actions-OpenWrt)
+- [xiaomeng9597](https://github.com/xiaomeng9597)
 - [Microsoft Azure](https://azure.microsoft.com)
 - [GitHub Actions](https://github.com/features/actions)
 - [OpenWrt](https://github.com/openwrt/openwrt)
