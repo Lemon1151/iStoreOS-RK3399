@@ -163,7 +163,7 @@ jobs:
 
     - name: 设置 Release Tag
       run: |
-        RELEASE_TAG="iStoreOS-24.10-RK3399_$(date +%Y.%m)"
+        RELEASE_TAG="iStoreOS-24.10-RK3399-$(date +%Y.%m)"
         echo "RELEASE_TAG=${RELEASE_TAG}" >> $GITHUB_ENV
 
     - name: 上传固件
