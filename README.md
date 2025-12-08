@@ -11,9 +11,11 @@
 
 ### RK3399
 
-| 设备           | 包名称                                                                   |
-| -------------- | ------------------------------------------------------------------------ |
-| NanoPC-T4      | istoreos-rockchip-armv8-friendlyarm_nanopc-t4-ext4-sysupgrade.img.gz     |
+| 设备           | 包名称                                                                   | 备注                      | 
+| -------------- | ------------------------------------------------------------------------ |---------------------------|
+| NanoPC-T4      | istoreos-rockchip-armv8-friendlyarm_nanopc-t4-ext4-sysupgrade.img.gz     | WiFi不可用时，复制brcm目录 |
+|                | istoreos-rockchip-armv8-friendlyarm_nanopc-t4-squashfs-sysupgrade.img.gz | 驱动替换重启即可           |
+
 
 ## 鸣谢
 
